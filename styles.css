@@ -1,0 +1,255 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1E1E1E; /* Dark background */
+    color: #FFFFFF; /* Light text */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.header {
+    background: linear-gradient(135deg, #2C3E50, #4CA1AF); /* Gradient background */
+    color: #FFFFFF; /* White text */
+    padding: 40px 0; /* More padding for a larger header */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 3em; /* Larger font size */
+    font-weight: 700; /* Bold font */
+}
+
+.header nav {
+    margin-top: 20px; /* Space between title and nav */
+}
+
+.header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.header nav ul li {
+    margin: 0 15px;
+}
+
+.header nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header nav ul li a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+.container {
+    max-width: 1000px; /* Fixed width for the container */
+    margin: 0 auto; /* Center the container */
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.experience-sidebar {
+    background-color: #FFFFFF; /* White sidebar */
+    color: #2C3E50; /* Dark text */
+    padding: 20px;
+    width: 220px; /* Slightly wider sidebar */
+    position: fixed; /* Fixed position */
+    top: 270px; /* Start lower */
+    left: 120px;
+    border-radius: 20px; /* Very round edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-sidebar h2 {
+    font-size: 1.2em; /* Smaller font size */
+    color: #2C3E50;
+    border-bottom: 2px solid #3498DB; /* Accent color underline */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.experience-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-sidebar ul li {
+    margin-bottom: 10px;
+    color: #2C3E50; /* Dark text */
+    font-size: 0.9em; /* Smaller font size */
+    display: flex;
+    align-items: center;
+}
+
+.experience-sidebar ul li .dot {
+    height: 8px;
+    width: 8px;
+    background-color: #E74C3C; /* Red dot */
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+    margin-left: 240px; /* Adjust for sidebar width and margin */
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #34495E; /* Slightly lighter dark blue for sections */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 2em;
+    color: #FFFFFF; /* White for headings */
+    border-bottom: 2px solid #3498DB; /* Accent color underline */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px;
+    transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+.project, .blog-post {
+    background-color: #2C3E50; /* Dark blue background for cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s;
+}
+
+.project:hover, .blog-post:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project h3, .blog-post h3 {
+    margin-top: 0;
+    color: #FFFFFF; /* White for subheadings */
+}
+
+.project a, .blog-post a {
+    color: #3498DB; /* Accent color link */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.project a:hover, .blog-post a:hover {
+    color: #2980B9; /* Slightly darker accent color on hover */
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    margin: 0 1rem;
+    color: #3498DB; /* Accent color for social icons */
+    text-decoration: none;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #2980B9; /* Slightly darker accent color on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #2C3E50; /* Dark blue footer */
+    color: #FFFFFF;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em; /* Smaller font size for smaller screens */
+    }
+
+    .header nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+    }
+
+    .header nav ul li {
+        margin: 10px 0; /* Margin for vertical stacking */
+    }
+
+    .experience-sidebar {
+        position: static; /* Make sidebar static */
+        width: 100%; /* Full width */
+        margin-bottom: 20px; /* Margin below sidebar */
+    }
+
+    main {
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .container {
+        flex-direction: column; /* Stack container items vertically */
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5em; /* Even smaller font size for very small screens */
+    }
+
+    .header nav ul li {
+        margin: 5px 0; /* Smaller margin for very small screens */
+    }
+
+    .experience-sidebar {
+        padding: 10px; /* Smaller padding */
+        margin-top: 20px; /* Add gap between header and sidebar */
+    }
+
+    section {
+        padding: 10px; /* Smaller padding */
+        width: 90%; /* Reduce width for smaller screens */
+        margin: 0 auto 20px; /* Center and add bottom margin */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Smaller font size for headings */
+    }
+}
