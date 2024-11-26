@@ -6,26 +6,13 @@ import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Recommendations from "@/components/Recommendations";
-import dynamic from 'next/dynamic';
-
-// Dynamically import Spline with no SSR
-const Spline = dynamic(() => import('@splinetool/react-spline'), {
-  ssr: false,
-  loading: () => <div className="w-full h-full bg-black" />
-});
+import Background from "@/components/Background";
 
 export default function Home() {
   return (
     <main className="relative">
-      {/* Spline Background with Overlay */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-black/90 z-10"></div>
-        <Spline 
-          scene="https://prod.spline.design/RclBwPQhANhTdFMm/scene.splinecode"
-          className="w-full h-full"
-        />
-      </div>
-
+      <Background />
+      
       {/* Content */}
       <div className="relative z-20">
         <Navigation />
