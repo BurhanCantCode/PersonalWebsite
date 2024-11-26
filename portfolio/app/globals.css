@@ -4,21 +4,23 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 10, 10, 10;
+  --background-rgb: 0, 0, 0;
 }
 
 html {
   scroll-behavior: smooth;
+  background: rgb(var(--background-rgb));
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    to bottom,
-    rgb(var(--background-start-rgb)),
-    rgb(var(--background-end-rgb))
-  );
+  background: transparent;
+  min-height: 100vh;
+}
+
+section {
+  position: relative;
+  background: transparent;
 }
 
 @layer utilities {

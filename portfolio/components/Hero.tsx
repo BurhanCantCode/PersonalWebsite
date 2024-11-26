@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="h-screen relative overflow-hidden">
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-16 bg-gradient-to-t from-black/50 to-transparent">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-16">
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
