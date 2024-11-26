@@ -34,17 +34,17 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section className="py-32 px-16" id="experience">
+    <section className="py-16 md:py-32 px-4 md:px-16" id="experience">
       <div className="max-w-[90rem] mx-auto">
-        <div className="mb-16">
-          <span className="text-secondary text-sm uppercase tracking-wider">Career</span>
-          <h2 className="text-6xl font-bold mt-2">
+        <div className="mb-8 md:mb-16">
+          <span className="text-secondary text-xs md:text-sm uppercase tracking-wider">Career</span>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mt-2">
             <span className="text-secondary">And This Is</span>{" "}
             <span className="text-white">My Career</span>
           </h2>
         </div>
         
-        <div className="space-y-16">
+        <div className="space-y-8 md:space-y-16">
           {experiences.map((experience, index) => (
             <motion.div
               key={index}
@@ -52,21 +52,21 @@ export default function Experience() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="grid grid-cols-12 gap-8"
+              className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8"
             >
-              <div className="col-span-4">
-                <h3 className="text-xl font-medium text-white mb-1">
+              <div className="col-span-1 md:col-span-4">
+                <h3 className="text-lg md:text-xl font-medium text-white mb-1">
                   {experience.title}
                 </h3>
-                <p className="text-secondary text-sm mb-1">
+                <p className="text-xs md:text-sm text-secondary mb-1">
                   {experience.company} | {experience.date}
                 </p>
-                <p className="text-secondary text-sm">
+                <p className="text-xs md:text-sm text-secondary">
                   {experience.location}
                 </p>
               </div>
-              <div className="col-span-8">
-                <p className="text-secondary leading-relaxed">
+              <div className="col-span-1 md:col-span-8">
+                <p className="text-sm md:text-base text-secondary leading-relaxed">
                   {experience.description}
                 </p>
               </div>

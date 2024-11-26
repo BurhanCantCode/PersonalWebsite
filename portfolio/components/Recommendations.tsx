@@ -31,17 +31,17 @@ const testimonials = [
 
 export default function Recommendations() {
   return (
-    <section className="py-32 px-16" id="recommendations">
+    <section className="py-16 md:py-32 px-4 md:px-16" id="recommendations">
       <div className="max-w-[90rem] mx-auto">
-        <div className="mb-16">
-          <span className="text-secondary text-sm uppercase tracking-wider">Testimonials</span>
-          <h2 className="text-6xl font-bold mt-2">
+        <div className="mb-8 md:mb-16">
+          <span className="text-secondary text-xs md:text-sm uppercase tracking-wider">Testimonials</span>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mt-2">
             <span className="text-secondary">See what</span>{" "}
             <span className="text-white">others say</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 gap-6 md:gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -49,10 +49,10 @@ export default function Recommendations() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="glass-dark rounded-xl p-8"
+              className="glass-dark rounded-xl p-4 md:p-8"
             >
-              <div className="flex items-start gap-6">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+              <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-6">
+                <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden flex-shrink-0">
                   <Image
                     src={testimonial.image}
                     alt={testimonial.author}
@@ -61,18 +61,18 @@ export default function Recommendations() {
                   />
                 </div>
                 
-                <div className="flex-grow space-y-6">
-                  <p className="text-secondary text-lg leading-relaxed">
+                <div className="flex-grow space-y-4 md:space-y-6">
+                  <p className="text-sm md:text-lg text-secondary leading-relaxed">
                     "{testimonial.text}"
                   </p>
                   
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
                     <div>
-                      <h4 className="text-white font-medium">{testimonial.author}</h4>
-                      <p className="text-secondary text-sm">{testimonial.role}</p>
-                      <p className="text-secondary text-sm italic mt-1">{testimonial.managed}</p>
+                      <h4 className="text-base md:text-lg font-medium text-white">{testimonial.author}</h4>
+                      <p className="text-xs md:text-sm text-secondary">{testimonial.role}</p>
+                      <p className="text-xs md:text-sm text-secondary italic mt-1">{testimonial.managed}</p>
                     </div>
-                    <p className="text-secondary text-sm">{testimonial.date}</p>
+                    <p className="text-xs md:text-sm text-secondary">{testimonial.date}</p>
                   </div>
                 </div>
               </div>
