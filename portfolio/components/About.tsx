@@ -4,7 +4,6 @@ import Image from "next/image";
 
 export default function About() {
   const stats = [
-    { label: "Years of experience", value: "1+" },
     { label: "Projects Completed", value: "10+" },
     { label: "Hours of Coding", value: "1000+" },
     { label: "AI Models Trained", value: "15+" }
@@ -51,7 +50,7 @@ export default function About() {
               I'm passionate about leveraging technology to solve real-world problems and drive innovation.
             </p>
 
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-3 gap-8">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
