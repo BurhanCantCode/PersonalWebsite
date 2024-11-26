@@ -128,26 +128,28 @@ export default function Projects() {
                       duration: 0.5,
                       ease: [0.22, 1, 0.36, 1]
                     }}
-                    className="absolute inset-0 p-6 flex flex-col"
+                    className="absolute inset-0 p-4 md:p-6 flex flex-col overflow-y-auto scrollbar-hide"
                   >
                     <div>
-                      <h3 className="text-2xl font-medium text-white mb-2">
+                      <h3 className="text-xl md:text-2xl font-medium text-white mb-2">
                         {project.title}
                       </h3>
-                      <p className="text-secondary text-sm mb-2">{project.date}</p>
+                      <p className="text-xs md:text-sm text-secondary mb-2">{project.date}</p>
                       {project.association && (
-                        <p className="text-secondary text-sm mb-4">
+                        <p className="text-xs md:text-sm text-secondary mb-2">
                           Associated with {project.association}
                         </p>
                       )}
                     </div>
-                    <p className="text-secondary text-sm mb-4">{project.description}</p>
+                    <p className="text-xs md:text-sm text-secondary mb-4 line-clamp-3 md:line-clamp-none">
+                      {project.description}
+                    </p>
                     <div className="mt-auto">
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-1.5 md:gap-2">
                         {project.tech.map((tech, idx) => (
                           <span
                             key={idx}
-                            className="text-xs px-2 py-1 bg-white/10 rounded-full text-white"
+                            className="text-[10px] md:text-xs px-2 py-0.5 md:py-1 bg-white/10 rounded-full text-white"
                           >
                             {tech}
                           </span>
