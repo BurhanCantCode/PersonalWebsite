@@ -6,6 +6,13 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   transpilePackages: ['@splinetool/react-spline'],
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@splinetool/runtime': '@splinetool/runtime'
+    };
+    return config;
+  }
 };
 
 module.exports = nextConfig; 
