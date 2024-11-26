@@ -6,7 +6,13 @@ import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Recommendations from "@/components/Recommendations";
-import Spline from '@splinetool/react-spline';
+import dynamic from 'next/dynamic';
+
+// Dynamically import Spline with no SSR
+const Spline = dynamic(() => import('@splinetool/react-spline'), {
+  ssr: false,
+  loading: () => <div className="w-full h-full bg-black" />
+});
 
 export default function Home() {
   return (
